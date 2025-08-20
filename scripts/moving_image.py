@@ -3,6 +3,7 @@ class MoveingImage:
     global screen
     def __init__(self, surface, image:str, pos_x:float, pos_y:float):
         super().__init__()
+        self.pos = (pos_x, pos_y)
         self.screen = surface
         self.sprite = pygame.image.load(image)
         self.rect = self.sprite.get_rect()

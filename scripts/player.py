@@ -7,6 +7,12 @@ class Player:
         self.sprite = pygame.image.load('assets/sprites/yellowbird-midflap.png')
         self.rect = self.sprite.get_rect()
         self.rect.center = self.position
+    def die(position):
+        vel:float
+        vel -= 5
+        position -= vel
+        pygame.transform.rotate(self.sprite, vel/100)
+        self.rect.center = (80, position)
     
     # def vel_logic(self):
     #     vel:float
